@@ -1,0 +1,33 @@
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <input type="text" [(ngModel)]="term" class="form-control" placeholder="Search"> 
+            <div  *ngFor="let pro of products| filter:term; let i=index">
+                <div>
+                    <a class="list-group-item clearfix" style="cursor:pointer">
+                    <div>
+                        <div class="pull-left">
+                            <h4 class="list-group-item-heading">{{pro.pname}}</h4>
+                            <p class="list-group-item-text">{{pro.description}}</p>
+                            <p>Price : {{pro.price}}</p>
+                        </div>
+                        
+                        <div class="pull-right">
+                            <img
+                            src="{{pro.imageurl}}"
+                            class="img-responsive"
+                            style="max-height: 50px;">
+                            <a style="cursor: pointer;" (click)="addtocart(i)">Add to Cart</a>
+                        </div> 
+                        
+                    </div>
+                    
+                    </a>
+                </div>
+            </div> 
+            <button class="btn btn-primary" (click)="checkout()">Checkout</button>           
+        </div>
+    </div>
+</div>
+</body>

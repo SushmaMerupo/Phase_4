@@ -1,0 +1,8 @@
+<p>checkout works!</p>
+<div class="container">
+    <div class="panel panel-default" *ngFor="let item of cart">
+        <div class="panel-heading">{{item.pname}}</div>
+        <div class="panel-body">{{item.price}}</div>
+    </div>
+</div>
+<button class="btn btn-primary" (click)="payment()">Proceed to pay</button>

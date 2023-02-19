@@ -1,0 +1,25 @@
+
+    <div  *ngFor="let pro of products; let i=index">
+        <div>
+            <a class="list-group-item clearfix" style="cursor:pointer">
+            <div>
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">{{pro.pname}}</h4>
+                    <p class="list-group-item-text">{{pro.description}}</p>
+                </div> 
+                
+                <div class="pull-right">
+                    <img
+                    src="{{pro.imageurl}}"
+                    class="img-responsive"
+                    style="max-height: 50px;">
+                    <a style="cursor: pointer;" (click)="deletepro(i)">Delete</a>
+                </div> 
+                
+            </div>
+            
+            </a>
+        </div>
+    </div>
+
+
