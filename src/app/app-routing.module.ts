@@ -8,6 +8,7 @@ import { CheckoutComponent } from './Component/usercompo/checkout/checkout.compo
 import { ConfirmComponent } from './Component/usercompo/confirm/confirm.component';
 import { PaymentComponent } from './Component/usercompo/payment/payment.component';
 import { ShowprodsComponent } from './Component/usercompo/showprods/showprods.component';
+import { UloginComponent } from './Component/usercompo/ulogin/ulogin.component';
 import { UsercompoComponent } from './Component/usercompo/usercompo.component';
 import { AuthguardService } from './Services/authguard.service';
 
@@ -19,7 +20,8 @@ const routes: Routes = [
     {path:'manageproduct',component:ManageproComponent}
   ]},
   {path:'user',component:UsercompoComponent,children:[
-    {path:'',redirectTo:'showproducts',pathMatch:'full'},
+    {path:'',redirectTo:'Ulogin',pathMatch:'full'},
+    {path:'Ulogin', component:UloginComponent},
     {path:'showproducts',component:ShowprodsComponent},
     {path:'checkout',component:CheckoutComponent},
     {path:'payment',component:PaymentComponent},

@@ -17,6 +17,7 @@ import { ShowprodsComponent } from './Component/usercompo/showprods/showprods.co
 import { CheckoutComponent } from './Component/usercompo/checkout/checkout.component';
 import { PaymentComponent } from './Component/usercompo/payment/payment.component';
 import { ConfirmComponent } from './Component/usercompo/confirm/confirm.component';
+import { UloginComponent } from './Component/usercompo/ulogin/ulogin.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ConfirmComponent } from './Component/usercompo/confirm/confirm.componen
     ShowprodsComponent,
     CheckoutComponent,
     PaymentComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    UloginComponent
   ],
   imports: [
     BrowserModule,
